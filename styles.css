@@ -1,0 +1,128 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Fuente más simple y minimalista */
+  background-color: #f5f5f5; /* Fondo claro y neutral */
+  color: #333; /* Texto oscuro para contraste */
+}
+
+/* Estilo para el video de fondo */
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Asegura que el video de fondo esté detrás de los otros elementos */
+}
+
+/* Estilo para los controles del video */
+video {
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia desde el fondo */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Asegura que los controles estén encima del video */
+}
+
+/* Contenedor principal de la línea de tiempo */
+.linea-tiempos {
+  padding: 30px;
+  margin: 50px auto;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco suave */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 25px;
+  color: #444; /* Gris oscuro para el título */
+  font-weight: normal;
+}
+
+/* Estilo para cada evento de la línea de tiempo */
+.evento {
+  margin-bottom: 40px;
+  padding: 15px;
+  border-left: 5px solid #bbb; /* Línea gris suave */
+}
+
+.evento h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #444; /* Gris oscuro para el subtítulo */
+}
+
+.evento p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #666; /* Texto gris suave */
+}
+
+/* Estilo para los integrantes */
+.integrante {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 15px;
+  border-top: 2px solid #bbb; /* Línea gris suave */
+}
+
+.integrante img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  object-fit: cover; /* Recorta la imagen sin deformarla */
+}
+
+.integrante div {
+  max-width: 600px;
+}
+
+/* Nombres de los integrantes */
+.integrante h3 {
+  font-size: 1.8em;
+  margin-bottom: 8px;
+  color: #444; /* Gris oscuro para el nombre */
+}
+
+/* Descripción de los integrantes */
+.integrante p {
+  font-size: 1.1em;
+  color: #666; /* Texto gris suave */
+  line-height: 1.5;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  .linea-tiempos {
+      margin: 15px;
+      padding: 10px;
+  }
+
+  .integrante {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .integrante img {
+      width: 100px;
+      height: 100px;
+  }
+
+  .integrante h3 {
+      font-size: 1.6em;
+  }
+
+  .integrante p {
+      font-size: 1em;
+  }
+}
+

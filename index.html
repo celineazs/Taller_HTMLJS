@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilogía del Tiempo BTS</title>
+  <style>
+    /* Estilo para el video de fondo */
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      /*background: rgba(0, 0, 0, 0.7);*/
+    }
+
+    .linea-tiempos {
+      margin: 20px auto;
+      padding: 10px;
+      max-width: 1200px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+
+    /* Estilos de los eventos */
+    .evento {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .evento img {
+      max-width: 150px;
+      border-radius: 10px;
+      margin-right: 15px;
+    }
+
+    .evento-texto {
+      max-width: 500px;
+    }
+
+    .evento h2 {
+      margin: 10px 0;
+      font-size: 2em;
+    }
+
+    .evento p {
+      font-size: 1.2em;
+    }
+
+    /* Estilos para los integrantes */
+    .integrantes,
+    .integrantes-bajo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Centra horizontalmente */
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .integrante {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .integrante img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      border-radius: 10px; /* Cambiado a 10px para hacer las imágenes cuadradas */
+    }
+
+    .integrante div {
+      max-width: 150px;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .evento {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .evento img {
+        margin: 0 auto 15px auto;
+      }
+    }
+
+    /* Estilo para los controles de video y audio */
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #6e2121;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #933737;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video de fondo con autoplay, loop y sonido activado -->
+  <video id="video-fondo" autoplay loop>
+    <source src="video/Dionysus.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+  
+  <audio id="audio" autoplay loop>
+    <source src="audio/tu_audio.mp3" type="audio/mp3">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Controles de Video y Audio -->
+  <div class="controls" style="position: fixed; bottom: 30px; left: 40px;">
+    <button onclick="toggleVideo()" style="padding: 15px; font-size: 1em; display: flex; align-items: center; justify-content: center;">
+    <img src="imagenesbts/play.png" style="width: 30px; height: 30px;">
+    </button>
+  </div>
+
+
+  <!-- Integrantes -->
+  <div class="linea-tiempos">
+    <h1>BTS - Grupo Musical </h1>
+    <!-- Foto de BTS y explicación breve -->
+   <div class="linea-tiempos" style="text-align: center;">
+    <img src="imagenesbts/bts.jpg"  style="width: 50%; margin: 20px 0;">
+    <p>BTS es un grupo de K-pop surcoreano formado en 2013 bajo la agencia Big Hit Entertainment. Desde sus inicios, han destacado por su estilo único que fusiona pop, hip-hop, R&B y otros géneros, creando un sonido característico que ha atraído a una audiencia global. Su éxito no solo se debe a su música, sino también a las letras profundas que abordan temas como el amor propio, la lucha contra las dificultades emocionales y la superación personal. A lo largo de su carrera, BTS ha logrado romper múltiples récords, convirtiéndose en un fenómeno mundial y una de las bandas más influyentes de la historia moderna. Aunque en 2022 iniciaron una pausa para que los miembros pudieran cumplir con el servicio militar obligatorio, han anunciado su regreso como grupo completo en 2026.</p>
+  </div>
+    <div class="integrantes">
+    <div class="integrantes">
+      <div class="integrante">
+        <img src="imagenesbts/rm.jpg" alt="RM">
+        <div>
+          <h3>RM</h3>
+          <p>Kim Nam-joon, conocido como RM, es el líder de BTS y uno de los principales raperos. Su habilidad para escribir letras profundas lo ha establecido como un líder intelectual del grupo.</p>
+        </div>
+      </div>
+
+      <div class="integrante">
+        <img src="imagenesbts/jin.jpg" alt="Jin">
+        <div>
+          <h3>Jin</h3>
+          <p>Kim Seok-jin, conocido como Jin, es el mayor de los miembros y el vocalista principal de BTS. Es conocido por su impresionante voz y su talento en el canto.</p>
+        </div>
+      </div>
+
+      <div class="integrante">
+        <img src="imagenesbts/yoongi.jpg" alt="Suga">
+        <div>
+          <h3>Suga</h3>
+          <p>Min Yoongi, conocido como Suga, es el rapero principal de BTS. Es famoso por su habilidad para componer y producir música.</p>
+        </div>
+      </div>
+
+      <div class="integrante">
+        <img src="imagenesbts/hobi.jpg" alt="J-Hope">
+        <div>
+          <h3>J-Hope</h3>
+          <p>Jung Hoseok, conocido como J-Hope, es un rapero y bailarín destacado en BTS. Su energía en el escenario y su estilo único lo hacen muy querido por los fans.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miembros restantes -->
+    <div class="integrantes-bajo">
+      <div class="integrante">
+        <img src="imagenesbts/jimi.jpg" alt="Jimin">
+        <div>
+          <h3>Jimin</h3>
+          <p>Park Jimin es conocido por su increíble habilidad en la danza y su voz angelical. Es el bailarín principal y vocalista de BTS.</p>
+        </div>
+      </div>
+
+      <div class="integrante">
+        <img src="imagenesbts/tae.jpg" alt="V">
+        <div>
+          <h3>V</h3>
+          <p>Kim Taehyung, conocido como V, es el vocalista de BTS, con una voz única que ha cautivado a millones de fans en todo el mundo.</p>
+        </div>
+      </div>
+
+      <div class="integrante">
+        <img src="imagenesbts/jungkook.jpg" alt="Jungkook">
+        <div>
+          <h3>Jungkook</h3>
+          <p>Jeon Jungkook es el maknae (más joven) de BTS. Su talento en el canto, el baile y su versatilidad lo convierten en una estrella global.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trilogía del Tiempo BTS -->
+  <div class="linea-tiempos">
+    <h1>Trilogía del Tiempo BTS</h1>
+
+    <!-- Evento 1: Inicio de BTS -->
+    <div class="evento">
+      <img src="imagenesbts/no_more_dream.jpg" alt="No More Dream">
+      <div class="evento-texto" style="text-align: justify;">
+      <h2>2013: Inicio de BTS</h2>
+      <p>BTS debutó el 13 de junio de 2013 con su sencillo "No More Dream". Desde entonces, han conquistado corazones alrededor del mundo con su música única y sus poderosas presentaciones.</p>
+      </div>
+    </div>
+
+    <!-- Evento 2: Álbum "Dark & Wild" -->
+    <div class="evento">
+      <img src="imagenesbts/dark_and_wild.jpg" alt="Dark & Wild">
+      <div class="evento-texto" style="text-align: justify;">
+      <h2>2014: "Dark & Wild"</h2>
+      <p>En 2014, BTS lanzó su primer álbum de estudio, "Dark & Wild", que incluyó el exitoso sencillo "Danger". La banda siguió ganando popularidad en Corea y más allá.</p>
+      </div>
+    </div>
+
+    <!-- Evento 3: "The Most Beautiful Moment in Life" -->
+    <div class="evento">
+      </div>
+
+      <!-- Evento 3: "The Most Beautiful Moment in Life" -->
+      <div class="evento">
+        <img src="imagenesbts/the_most_beautiful.jpg" alt="The Most Beautiful Moment in Life">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2015: "The Most Beautiful Moment in Life"</h2>
+          <p>BTS lanzó la serie de álbumes "The Most Beautiful Moment in Life", que consolidó aún más su estatus en la escena musical coreana e internacional. El sencillo "I Need U" fue un éxito rotundo.</p>
+        </div>
+      </div>
+
+      <!-- Evento 4: Éxito Internacional con "WINGS" -->
+      <div class="evento">
+        <img src="imagenesbts/wings.jpg" alt="WINGS">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2016: "WINGS" y éxito internacional</h2>
+          <p>En 2016, BTS lanzó "WINGS", su segundo álbum de estudio, que les permitió ganar reconocimiento a nivel mundial. Fue un año decisivo, marcando su ascenso a la fama internacional.</p>
+        </div>
+      </div>
+
+      <!-- Evento 5: "Love Yourself: Her" -->
+      <div class="evento">
+        <img src="imagenesbts/love_yourself_her.jpg" alt="Love Yourself: Her">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2017: "Love Yourself: Her"</h2>
+          <p>El álbum "Love Yourself: Her" de BTS alcanzó el éxito global, convirtiéndose en un éxito comercial y consolidando a BTS como una superestrella mundial.</p>
+        </div>
+      </div>
+
+      <!-- Evento 6: "Love Yourself: Tear" -->
+      <div class="evento">
+        <img src="imagenesbts/love_yourself_tear.jpg" alt="Love Yourself: Tear">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2018: "Love Yourself: Tear"</h2>
+          <p>El lanzamiento de "Love Yourself: Tear" marcó otro hito para BTS, siendo el primer álbum de K-pop en alcanzar el número uno en el Billboard 200.</p>
+        </div>
+      </div>
+
+      <!-- Evento 7: "Map of the Soul: Persona" -->
+      <div class="evento">
+        <img src="imagenesbts/persona.jpg" alt="Map of the Soul: Persona">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2019: "Map of the Soul: Persona"</h2>
+          <p>BTS lanzó "Map of the Soul: Persona" en 2019, lo que marcó el comienzo de una nueva era para el grupo, trayendo aún más éxitos y consolidando su popularidad global.</p>
+        </div>
+      </div>
+
+      <!-- Evento 8: "BE" -->
+      <div class="evento">
+        <img src="imagenesbts/be.jpg" alt="BE">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2020: "BE"</h2>
+          <p>En 2020, BTS lanzó "BE", un álbum que reflejó la época de la pandemia y mostró una faceta más personal y reflexiva del grupo.</p>
+        </div>
+      </div>
+
+      <!-- Evento 9: "Proof" -->
+      <div class="evento">
+        <img src="imagenesbts/proof.jpg" alt="Proof">
+        <div class="evento-texto" style="text-align: justify;">
+          <h2>2022: "Proof"</h2>
+          <p>"Proof" es una recopilación de canciones que marca el 9º aniversario de BTS. Es una celebración de su trayectoria y un vistazo a su legado en la música.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts para controles -->
+    <script>
+      // Función para alternar entre reproducir/pausar el video
+      function toggleVideo() {
+          var video = document.getElementById("video-fondo");
+          if (video.paused) {
+              video.play();
+          } else {
+              video.pause();
+          }
+      }
+
+  </script>
+
+</body>
+</html>
